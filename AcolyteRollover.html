@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Acolyte of Astaroth</title>
+    <style>
+        #image-container {
+            position: relative;
+            width: 400px;
+            height: 400px;
+        }
+
+        #image-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 400px;
+            height: 400px;
+            transition: opacity 1s ease;
+        }
+
+        #image-wagdie {
+            opacity: 1;
+            z-index: 1; 
+        }
+
+        #image-acolyte {
+            opacity: 1;
+            z-index: 2; 
+        }
+    </style>
+</head>
+<body>
+    <div id="image-container">
+        <img id="image-wagdie" src="https://storage.googleapis.com/seared-wagdie-images/ID.png" alt="WAGDIE">
+        <img id="image-acolyte" src="https://raw.seadn.io/files/e9f04d9454ddd78967950be054d41ba5.png" alt="Acolyte">
+    </div>
+
+    <script>
+        var imageTop = document.getElementById('image-acolyte');
+
+        imageTop.addEventListener('mouseover', function() {
+            this.style.opacity = 0;
+        });
+
+        imageTop.addEventListener('mouseout', function() {
+            this.style.opacity = 1;
+        });
+    </script>
+</body>
+</html>
